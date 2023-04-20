@@ -1,34 +1,19 @@
 function fibonacci(num) {
-  // memoize previous results
-  const memo = {};
-
-  function fibonacciHelper(num) {
-    // check memoization cache
-    if (memo[num] !== undefined) {
-      return memo[num];
-    }
-
-    // base cases
-    if (num === 0) {
-      return 0;
-    } else if (num === 1) {
-      return 1;
-    }
-
-    // recursive case
-    else {
-      const result = fibonacciHelper(num - 1) + fibonacciHelper(num - 2);
-      memo[num] = result; // memoize result
-      return result;
-    }
-  }
-
-  return fibonacciHelper(num);
+function fibonacci(num) {
+if (num === 1) return 0;
+else if (num === 2) return 1;
+num -= 2;
+var num1 = 0;
+var num2 = 1;
+var sum;
+var i = 0;
+for (i = 0; i < num; i++) {
+sum = num1 + num2;
+num1 = num2;
+num2 = sum;
 }
-// calculate the 10th Fibonacci number (should be 55)
-console.log(fibonacci(num));
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
+return num2;
+}
 
-    Terms
+
+module.exports = fibonacci;
