@@ -1,19 +1,21 @@
 function fibonacci(num) {
-function fibonacci(num) {
-if (num === 1) return 0;
-else if (num === 2) return 1;
-num -= 2;
-var num1 = 0;
-var num2 = 1;
-var sum;
-var i = 0;
-for (i = 0; i < num; i++) {
-sum = num1 + num2;
-num1 = num2;
-num2 = sum;
+let a=1
+let b=1
+	if(num<3)
+	{
+		return a;
+	}
+	else
+	{
+		let sum=1
+		for(let i=3;i<=num;i++)
+			{
+				sum=a+b
+				a=b;
+				b=sum;
+			}
+		return sum
+	}
 }
-return num2;
-}
-
 
 module.exports = fibonacci;
