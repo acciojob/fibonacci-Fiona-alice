@@ -1,24 +1,16 @@
 function fibonacci(num) {
 // your code here
-	var first = 0;
-	var second = 1;
-	var third =0;
-
-	if(num == 1){
-		console.log(first);
-	}
-	else if(num == 2){
-		console.log(second)
-	}
-	else{
-		for(let i=3;i<=num;i++){
-			third = first + second;
-			first = second;
-			second = third;
-			
-		}
-		console.log(third);
-	}
+	let a=0,b=1,c=0,i=3;
+while(i<=num){  
+	
+	c=a+b;
+	a=b;
+     b=c;
+	i++;
 }
-
+	return c;  
+}
+let n=prompt("Enter n terms");
+let last=fibonacci(n);
+alert(last);
 module.exports = fibonacci;
