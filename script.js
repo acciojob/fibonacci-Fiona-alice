@@ -1,20 +1,23 @@
 function fibonacci(num) {
-let a=1
-let b=1
-	if(num<3)
-	{
-		return a;
+// your code here
+	var first = 0;
+	var second = 1;
+	var third =0;
+
+	if(num == 1){
+		console.log(first);
 	}
-	else
-	{
-		let sum=1
-		for(let i=3;i<=num;i++)
-			{
-				sum=a+b
-				a=b;
-				b=sum;
-			}
-		return sum
+	else if(num == 2){
+		console.log(second)
+	}
+	else{
+		for(let i=3;i<=num;i++){
+			third = first + second;
+			first = second;
+			second = third;
+			
+		}
+		console.log(third);
 	}
 }
 
